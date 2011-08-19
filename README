@@ -1,0 +1,28 @@
+NAME
+    Sub::Spec::Examples - Various spec'ed functions, for examples and
+    testing
+
+VERSION
+    version 0.01
+
+SYNOPSIS
+     use Sub::Spec::Examples qw(delay);
+     delay();
+
+DESCRIPTION
+    This module and its submodules contain an odd mix of various functions,
+    mostly simple ones, each with its Sub::Spec spec. Mostly used for
+    testing spec or various Sub::Spec modules.
+
+SEE ALSO
+    Sub::Spec
+
+AUTHOR
+    Steven Haryanto <stevenharyanto@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2011 by Steven Haryanto.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
