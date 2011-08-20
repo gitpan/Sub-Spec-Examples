@@ -3,7 +3,7 @@ NAME
     testing
 
 VERSION
-    version 0.02
+    version 0.03
 
 SYNOPSIS
      use Sub::Spec::Examples qw(delay);
@@ -59,6 +59,77 @@ FUNCTIONS
     *   code* => *int* (default 500)
 
         Error code to return.
+
+  gen_array(%args) -> [STATUS_CODE, ERR_MSG, RESULT]
+    Generate an array of specified length.
+
+    Returns a 3-element arrayref. STATUS_CODE is 200 on success, or an error
+    code between 3xx-5xx (just like in HTTP). ERR_MSG is a string containing
+    error message, RESULT is the actual result.
+
+    Arguments ("*" denotes required arguments):
+
+    *   len* => *int*
+
+        Array length.
+
+  gen_hash(%args) -> [STATUS_CODE, ERR_MSG, RESULT]
+    Generate a hash with specified number of pairs.
+
+    Returns a 3-element arrayref. STATUS_CODE is 200 on success, or an error
+    code between 3xx-5xx (just like in HTTP). ERR_MSG is a string containing
+    error message, RESULT is the actual result.
+
+    Arguments ("*" denotes required arguments):
+
+    *   pairs* => *int*
+
+        Number of pairs.
+
+  noop(%args) -> [STATUS_CODE, ERR_MSG, RESULT]
+    Do nothing, return original argument.
+
+    Returns a 3-element arrayref. STATUS_CODE is 200 on success, or an error
+    code between 3xx-5xx (just like in HTTP). ERR_MSG is a string containing
+    error message, RESULT is the actual result.
+
+    This function is declared as pure, meaning it does not change any
+    external state or have any side effects.
+
+    Arguments ("*" denotes required arguments):
+
+    *   arg* => **
+
+        Argument.
+
+  randlog(%args) -> [STATUS_CODE, ERR_MSG, RESULT]
+    Produce some random Log::Any log messages.
+
+    Returns a 3-element arrayref. STATUS_CODE is 200 on success, or an error
+    code between 3xx-5xx (just like in HTTP). ERR_MSG is a string containing
+    error message, RESULT is the actual result.
+
+    Arguments ("*" denotes required arguments):
+
+    *   n* => *int* (default 10)
+
+        Number of log messages to produce.
+
+    *   min_level* => *str* (default "fatal")
+
+        Value must be one of:
+
+         ["trace", "info", "warn", "debug", "error", "fatal"]
+
+        Minimum level.
+
+    *   max_level* => *str* (default "trace")
+
+        Value must be one of:
+
+         ["trace", "info", "warn", "debug", "error", "fatal"]
+
+        Maximum level.
 
 SEE ALSO
     Sub::Spec

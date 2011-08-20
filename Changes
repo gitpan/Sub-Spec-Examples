@@ -1,5 +1,12 @@
 Revision history for Sub::Spec::Examples
 
+0.03     2011-08-20
+
+         - Add functions: randlog(), gen_array(), gen_hash(), noop().
+
+         - delay(): Limit 'n' to 7200.
+
+
 0.02     2011-08-20
 
          - delay(): add 'per_second' argument.
