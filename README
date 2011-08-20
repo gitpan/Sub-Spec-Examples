@@ -3,7 +3,7 @@ NAME
     testing
 
 VERSION
-    version 0.01
+    version 0.02
 
 SYNOPSIS
      use Sub::Spec::Examples qw(delay);
@@ -13,6 +13,52 @@ DESCRIPTION
     This module and its submodules contain an odd mix of various functions,
     mostly simple ones, each with its Sub::Spec spec. Mostly used for
     testing spec or various Sub::Spec modules.
+
+FUNCTIONS
+    None are exported by default, but they are exportable.
+
+  delay(%args) -> [STATUS_CODE, ERR_MSG, RESULT]
+    Sleep, by default for 10 seconds.
+
+    Can be used to test time_limit clause.
+
+    Returns a 3-element arrayref. STATUS_CODE is 200 on success, or an error
+    code between 3xx-5xx (just like in HTTP). ERR_MSG is a string containing
+    error message, RESULT is the actual result.
+
+    Arguments ("*" denotes required arguments):
+
+    *   n* => *int* (default 10)
+
+        Number of seconds to sleep.
+
+    *   per_second* => *bool* (default 0)
+
+        Whether to sleep(1) for n times instead of sleep(n).
+
+  dies(%args) -> [STATUS_CODE, ERR_MSG, RESULT]
+    Dies tragically.
+
+    Can be used to test exception handling.
+
+    Returns a 3-element arrayref. STATUS_CODE is 200 on success, or an error
+    code between 3xx-5xx (just like in HTTP). ERR_MSG is a string containing
+    error message, RESULT is the actual result.
+
+    No known arguments at this time.
+
+  err(%args) -> [STATUS_CODE, ERR_MSG, RESULT]
+    Return error response.
+
+    Returns a 3-element arrayref. STATUS_CODE is 200 on success, or an error
+    code between 3xx-5xx (just like in HTTP). ERR_MSG is a string containing
+    error message, RESULT is the actual result.
+
+    Arguments ("*" denotes required arguments):
+
+    *   code* => *int* (default 500)
+
+        Error code to return.
 
 SEE ALSO
     Sub::Spec

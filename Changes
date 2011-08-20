@@ -1,5 +1,12 @@
 Revision history for Sub::Spec::Examples
 
+0.02     2011-08-20
+
+         - delay(): add 'per_second' argument.
+
+         - new function: err().
+
+
 0.01     2011-08-19
 
          First release.
