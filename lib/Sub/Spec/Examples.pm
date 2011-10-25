@@ -7,7 +7,7 @@ use warnings;
 use List::Util qw(min max);
 use Log::Any '$log';
 
-our $VERSION = '0.05'; # VERSION
+our $VERSION = '0.04'; # VERSION
 
 our @ISA = qw(Exporter);
 our @EXPORT_OK = qw(
@@ -222,7 +222,7 @@ Sub::Spec::Examples - Various spec'ed functions, for examples and testing
 
 =head1 VERSION
 
-version 0.05
+version 0.04
 
 =head1 SYNOPSIS
 

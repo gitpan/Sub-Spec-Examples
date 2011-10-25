@@ -3,7 +3,7 @@ NAME
     testing
 
 VERSION
-    version 0.05
+    version 0.04
 
 SYNOPSIS
      use Sub::Spec::Examples qw(delay);

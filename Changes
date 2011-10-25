@@ -1,10 +1,5 @@
 Revision history for Sub::Spec::Examples
 
-0.05     2011-10-24
-
-         - Fix missing rand() in gen_array().
-
-
 0.04     2011-10-24
 
          - Add Sub::Spec::Examples::NoSpec module.

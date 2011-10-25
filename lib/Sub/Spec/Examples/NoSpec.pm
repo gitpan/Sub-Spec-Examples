@@ -16,11 +16,11 @@ sub gen_array {
     my ($len) = @_;
     $len //= 10;
     my @res;
-    for (1..$len) { push @res, int(rand $len)+1 }
+    for (1..$len) { push @res, int($len)+1 }
     \@res;
 }
 
-our $VERSION = '0.05'; # VERSION
+our $VERSION = '0.04'; # VERSION
 
 1;
 #ABSTRACT: Example of module without spec
@@ -34,7 +34,7 @@ Sub::Spec::Examples::NoSpec - Example of module without spec
 
 =head1 VERSION
 
-version 0.05
+version 0.04
 
 =head1 AUTHOR
 
