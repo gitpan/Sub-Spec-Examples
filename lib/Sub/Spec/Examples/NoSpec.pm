@@ -16,11 +16,11 @@ sub gen_array {
     my ($len) = @_;
     $len //= 10;
     my @res;
-    for (1..$len) { push @res, int($len)+1 }
+    for (1..$len) { push @res, int(rand $len)+1 }
     \@res;
 }
 
-our $VERSION = '0.04'; # VERSION
+our $VERSION = '0.06'; # VERSION
 
 1;
 #ABSTRACT: Example of module without spec
@@ -34,7 +34,7 @@ Sub::Spec::Examples::NoSpec - Example of module without spec
 
 =head1 VERSION
 
-version 0.04
+version 0.06
 
 =head1 AUTHOR
 
@@ -42,7 +42,7 @@ Steven Haryanto <stevenharyanto@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Steven Haryanto.
+This software is copyright (c) 2012 by Steven Haryanto.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

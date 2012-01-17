@@ -7,7 +7,7 @@ use warnings;
 use List::Util qw(min max);
 use Log::Any '$log';
 
-our $VERSION = '0.04'; # VERSION
+our $VERSION = '0.06'; # VERSION
 
 our @ISA = qw(Exporter);
 our @EXPORT_OK = qw(
@@ -222,7 +222,7 @@ Sub::Spec::Examples - Various spec'ed functions, for examples and testing
 
 =head1 VERSION
 
-version 0.04
+version 0.06
 
 =head1 SYNOPSIS
 
@@ -230,6 +230,12 @@ version 0.04
  delay();
 
 =head1 DESCRIPTION
+
+B<NOTICE>: This module and the L<Sub::Spec> standard is deprecated as of Jan
+2012. L<Rinci> is the new specification to replace Sub::Spec, it is about 95%
+compatible with Sub::Spec, but corrects a few issues and is more generic.
+L<Rias> is the Perl implementation for Rinci and many of its modules can handle
+existing Sub::Spec sub specs. See L<Rias::Examples> for examples of metadata.
 
 This module and its submodules contain an odd mix of various functions, mostly
 simple ones, each with its L<Sub::Spec> spec. Mostly used for testing spec or
@@ -413,7 +419,7 @@ Steven Haryanto <stevenharyanto@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Steven Haryanto.
+This software is copyright (c) 2012 by Steven Haryanto.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
